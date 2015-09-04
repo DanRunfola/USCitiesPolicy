@@ -20,3 +20,9 @@ plot(Wat_Pol_PER)
 
 POV_Pol_PER<- PSM_correlogram(geomDef_join, var=geomDef_join$POV_POL_PER, order = 10, style = "W", start=0,end=500, zero.policy=TRUE) 
 plot(POV_Pol_PER)
+
+#Calculate nearest neighbor distances - in this case, nearest 5 points
+install.packages("fossil")
+distM <- as.matrix( fossil::earth.dist(geomDef_join@coords))
+AvgDistances <- apply( distM, 1, function(x) mean( x[order(x)][1:5] ) )
+summary(AvgDistances)
