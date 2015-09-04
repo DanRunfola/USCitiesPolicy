@@ -18,5 +18,5 @@ plot(EM_Pol_PER)
 Wat_Pol_PER <- PSM_correlogram(geomDef_join, var=geomDef_join$WAT_POL_PER, order = 20, style = "W", start=0,end=1000, zero.policy=TRUE) 
 plot(Wat_Pol_PER)
 
-POV_Pol_PER<- PSM_correlogram(geomDef_join, var=geomDef_join$POV_POL_PER, order = 10, style = "W", start=0,end=250, zero.policy=TRUE) 
+POV_Pol_PER<- PSM_correlogram(geomDef_join, var=geomDef_join$POV_POL_PER, order = 10, style = "W", start=0,end=500, zero.policy=TRUE) 
 plot(POV_Pol_PER)
